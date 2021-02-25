@@ -15,7 +15,15 @@ import { mapState, mapActions } from "vuex";
 import { currency } from "../currency";
 export default {
   computed: mapState({
-    products: (state) => state.products.all,
+    products: function (state) {
+      /* extract the products all data from "state" definition.
+       */
+      // console.log("ProductList.vue=>" + state);
+      // console.log(state);
+      // alert("ProductList.vue=>" + state);
+      return state.products.all;
+    },
+    // products: (state) => state.products.all,
   }),
   methods: {
     ...mapActions("cart", ["addProductToCart"]),

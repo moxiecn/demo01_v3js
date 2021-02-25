@@ -1,71 +1,81 @@
 {
-    "name": "demo01_v3js",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "dev": "vue-cli-service serve",
-        "devopen": "vue-cli-service serve --open",
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
+  "name": "demo01_v3js",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "devopen": "vue-cli-service serve --open",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
+    "colors-console": "^1.0.3",
+    "es6-promise": "^4.2.8",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0",
+    "glob": "^7.1.6",
+    "gsap": "^3.6.0",
+    "less": "^3.13.1",
+    "less-loader": "^4.1.0",
+    "loadsh": "^0.0.4",
+    "vue-router": "^4.0.4",
+    "vue-template-compiler": "^2.6.12",
+    "vuex": "^4.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true
     },
-    "dependencies": {
-        "core-js": "^3.6.5",
-        "vue": "^3.0.0"
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint",
+      "sourceType": "module"
     },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "~4.5.0",
-        "@vue/cli-plugin-eslint": "~4.5.0",
-        "@vue/cli-service": "~4.5.0",
-        "@vue/compiler-sfc": "^3.0.0",
-        "axios": "^0.21.1",
-        "babel-eslint": "^10.1.0",
-        "colors-console": "^1.0.3",
-        "es6-promise": "^4.2.8",
-        "eslint": "^6.7.2",
-        "eslint-plugin-vue": "^7.0.0-0",
-        "glob": "^7.1.6",
-        "gsap": "^3.6.0",
-        "less": "^3.13.1",
-        "less-loader": "^4.1.0",
-        "loadsh": "^0.0.4",
-        "vue-router": "^4.0.4",
-        "vue-template-compiler": "^2.6.12",
-        "vuex": "^4.0.0"
-    },
-    "eslintConfig": {
-        "root": true,
-        "env": {
-            "node": true
-        },
-        "extends": [
-            "plugin:vue/vue3-essential",
-            "eslint:recommended"
-        ],
-        "parserOptions": {
-            "parser": "babel-eslint"
-        },
-        "rules": {
-            "no-console": "off",
-            "no-debugger": "warn",
-            "no-unused-vars": "off",
-            "vue/no-unused-components": "off",
-            "space-before-function-paren": 0,
-            "eqeqeq": [
-                "off"
-            ],
-            "@typescript-eslint/no-var-requires": 0,
-            "@typescript-eslint/no-empty-function": 0,
-            "@typescript-eslint/no-explicit-any": 0,
-            "indent": [
-                "off",
-                2
-            ]
+    "rules": {
+      "no-console": "off",
+      "no-debugger": "warn",
+      "no-unused-vars": "off",
+      "vue/no-unused-components": "off",
+      "space-before-function-paren": 0,
+      "eqeqeq": [
+        "off"
+      ],
+      "@typescript-eslint/no-var-requires": 0,
+      "@typescript-eslint/no-empty-function": 0,
+      "@typescript-eslint/no-explicit-any": 0,
+      "indent": [
+        "off",
+        2
+      ],
+      "vue/script-indent": [
+        "off",
+        2,
+        {
+          "baseIndent": 1
         }
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not dead"
-    ]
+      ],
+      "prefer-const": 0
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

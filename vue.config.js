@@ -30,67 +30,66 @@
  * @date: 2021-02-24
  */
 const config = {
-    pages: {
-        app01: {
-            // page 的入口
-            entry: './src/pages/app01/main.js',
-            // 模板来源
-            template: './src/pages/app01/index.html',
-            // 在 dist/index.html 的输出
-            filename: 'indexApp01.html',
-            // 当使用 title 选项时，
-            // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-            title: 'app01 Page - official demo',
-            // 在这个页面中包含的块，默认情况下会包含
-            // 提取出来的通用 chunk 和 vendor chunk。
-            chunks: ['chunk-vendors', 'chunk-common', 'app01']
-        },
-        // 当使用只有入口的字符串格式时，
-        // 模板会被推导为 `public/subpage.html`
-        // 并且如果找不到的话，就回退到 `public/index.html`。
-        // 输出文件名会被推导为 `subpage.html`。
-        //subpage: 'src/subpage/main.js'
-        app02ShoppingCart: {
-            // page 的入口
-            entry: './src/pages/app02/classic/shopping-cart/main.js',
-            // 模板来源
-            template: './src/pages/app02/classic/shopping-cart/index.html',
-            // 在 dist/index.html 的输出
-            filename: 'indexApp02ShoppingCart.html',
-            // 当使用 title 选项时，
-            // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
-            title: 'app02 Page - official demo',
-            // 在这个页面中包含的块，默认情况下会包含
-            // 提取出来的通用 chunk 和 vendor chunk。
-            chunks: ['chunk-vendors', 'chunk-common', 'app02ShoppingCart']
-        },
+  pages: {
+    app01: {
+      // page 的入口
+      entry: "./src/pages/app01/main.js",
+      // 模板来源
+      template: "./src/pages/app01/index.html",
+      // 在 dist/index.html 的输出
+      filename: "indexApp01.html",
+      // 当使用 title 选项时，
+      // template 中的 title 标签需要是 <title><%= htmlWebpackPlugin.options.title %></title>
+      title: "app01 Page - official demo",
+      // 在这个页面中包含的块，默认情况下会包含
+      // 提取出来的通用 chunk 和 vendor chunk。
+      chunks: ["chunk-vendors", "chunk-common", "app01"]
     },
-    publicPath: "./", //the base URL when deploying app. Generally, it is in the root directory of the website by defualt.
-    outputDir: "dist", //The directory of the target file generated when running "vue-clie-service build" command.
-    assetsDir: "static", //Stores all kinds of assets when to build a output, such as pictures, video and other static files.
-    indexPath: "index.html", //in output directory, filename or full filename of the index page.
-    //filenameHashing:  true,
-    //pages,
-    //lintOnSave: "default",
-    runtimeCompiler: true,
-    devServer: {
-        index: "indexDefault.html",
-        open: true, //whether open default browser automatically.
-        host: "0.0.0.0",
-        port: 9527,
-        https: false,
-        hotOnly: false, // 配置首页 入口链接
-        // before: app => {
-        //     app.get('/', (req, res, next) => {
-        //         for (let i in pages) {
-        //             res.write(`<a target="_self" href="/${i}">/${i}</a></br>`);
-        //         }
-        //         res.end()
-        //     });
-        // }
+    // 当使用只有入口的字符串格式时，
+    // 模板会被推导为 `public/subpage.html`
+    // 并且如果找不到的话，就回退到 `public/index.html`。
+    // 输出文件名会被推导为 `subpage.html`。
+    //subpage: 'src/subpage/main.js'
+    app02ShoppingCart: {
+      entry: "./src/pages/app02/classic/shopping-cart/main.js",
+      template: "./src/pages/app02/classic/shopping-cart/index.html",
+      filename: "indexApp02ShoppingCart.html",
+      title: "app02 Page - official demo",
+      chunks: ["chunk-vendors", "chunk-common", "app02ShoppingCart"]
+    },
+    app03: {
+      entry: "./src/pages/app03/main.js",
+      template: "./src/pages/app03/index.html",
+      filename: "indexApp03.html",
+      title: "app03 Page - official demo",
+      chunks: ["chunk-vendors", "chunk-common", "app03"]
     }
-}
-
+  },
+  publicPath: "./", //the base URL when deploying app. Generally, it is in the root directory of the website by defualt.
+  outputDir: "dist", //The directory of the target file generated when running "vue-clie-service build" command.
+  assetsDir: "static", //Stores all kinds of assets when to build a output, such as pictures, video and other static files.
+  indexPath: "index.html", //in output directory, filename or full filename of the index page.
+  //filenameHashing:  true,
+  //pages,
+  //lintOnSave: "default",
+  runtimeCompiler: true,
+  devServer: {
+    index: "indexDefault.html", //open defaut home page.
+    open: true, //whether open default browser automatically.
+    host: "0.0.0.0",
+    port: 9527,
+    https: false,
+    hotOnly: false // 配置首页 入口链接
+    // before: app => {
+    //     app.get('/', (req, res, next) => {
+    //         for (let i in pages) {
+    //             res.write(`<a target="_self" href="/${i}">/${i}</a></br>`);
+    //         }
+    //         res.end()
+    //     });
+    // }
+  }
+};
 
 module.exports = config;
 

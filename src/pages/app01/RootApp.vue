@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="../../assets/logo.png" />
+  <img alt="Vue logo" src="../../../public/assets/pics/logo.png" />
   <DemoA1Counter counter="abc"></DemoA1Counter>
   <DemoA2CounterTimerr :counter="0" :interval="2000" intervalUnit="ms"></DemoA2CounterTimerr>
   <DemoA3BindAttribute></DemoA3BindAttribute>
